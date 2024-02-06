@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "734996712545",
+    "project_id": "daleel-df56f",
+    "storage_bucket": "daleel-df56f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734996712545:android:3fbf05b9a1ed3d9db52e20",
+        "android_client_info": {
+          "package_name": "com.daleel.vendors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734996712545-aaliook0o24b6omot5h0rp157oh36obt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5R3AUasYr11yKnlpYmxa1om4lwJsRHZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734996712545-aaliook0o24b6omot5h0rp157oh36obt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
