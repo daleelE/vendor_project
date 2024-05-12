@@ -58,8 +58,14 @@ double getScaleFactor() {
 }
 
 
-extension ResponsiveParsing on int {
+extension ResponsiveIntParsing on int {
   double get rW => getResponsiveWidth(this);
   double get rH => getResponsiveHeight(this);
   double get rF => getResponsiveWidth(this);
+}
+
+
+extension ResponsiveDoubleExtension on double {
+  double get rW => getResponsiveWidth(this);
+  double get rH => getResponsiveHeight(this);
 }
