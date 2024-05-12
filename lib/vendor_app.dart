@@ -36,7 +36,7 @@ class _VendorAppState extends State<VendorApp> {
         debugShowCheckedModeBanner: false,
         theme: ThemeService.lightTheme(context),
         darkTheme: ThemeService.darkTheme(context),
-        //themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         getPages: AppRouter.getPages,
         initialRoute: Routes.splash,
       ),

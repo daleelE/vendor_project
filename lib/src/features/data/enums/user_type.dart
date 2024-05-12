@@ -1,4 +1,5 @@
 enum UserType {
+  owner('owner'),
   vendor('vendor');
 
   final String user;
@@ -6,10 +7,12 @@ enum UserType {
 }
 
 extension UserTypeParsing on String {
-    UserType get toUserEnum{
-    switch(this){
+  UserType get toUserEnum {
+    switch (this) {
       case 'vendor':
         return UserType.vendor;
+      case 'owner':
+        return UserType.owner;
       default:
         return UserType.vendor;
     }

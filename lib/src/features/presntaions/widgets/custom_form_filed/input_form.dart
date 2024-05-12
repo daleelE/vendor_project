@@ -79,8 +79,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
               child: Text(
                 widget.title!.capitalize!,
                 style: widget.titleStyle ??
-                    context.bodyMedium!
-                        .copyWith(color: context.colorScheme.onBackground),
+                    context.bodyMedium!.copyWith(color: context.colorScheme.onBackground),
               ),
             ),
           TextFormField(

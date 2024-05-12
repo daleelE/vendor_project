@@ -12,6 +12,5 @@ void main() async {
       )));
 }
 
-bool kReleaseMode = true;
-
+bool kReleaseMode = false;
 

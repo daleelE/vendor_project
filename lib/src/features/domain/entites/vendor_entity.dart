@@ -25,6 +25,4 @@ class VendorEntity extends Equatable {
     commercialRegistrationNo,
     create,
     ];
-
-
 }
