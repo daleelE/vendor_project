@@ -68,3 +68,26 @@ class DeviceInfo extends Equatable {
         isIOS,
       ];
 }
+
+
+class AppInfoBuilder extends StatelessWidget {
+  final Widget Function(AppInfoParams) builder;
+  const AppInfoBuilder({super.key, required this.builder});
+
+  @override
+  Widget build(BuildContext context) {
+    return Builder(
+      builder: (context) {
+        bool isEng = context.read<LocaleBloc>().state == const Locale('en');
+        bool islight = context.read<ThemeBloc>().state == ThemeMode.light;
+        return builder(AppInfoParams(isEng: isEng, islight: islight));
+      },
+    );
+  }
+}
+
+class AppInfoParams {
+  final bool isEng;
+  final bool islight;
+  const AppInfoParams({this.isEng = false, this.islight = false});
+}

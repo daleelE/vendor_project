@@ -15,9 +15,9 @@ class JsonIcons {
 }
 
 class OnboardingImages {
-  static String onboard01 = 'assets/icons/svg/onboard01.svg';
-  static String onboard02 = 'assets/icons/svg/onboard02.svg';
-  static String onboard03 = 'assets/icons/svg/onboard03.svg';
+  static String onboard01 = '$iconsDaleelPath/onboard01.svg';
+  static String onboard02 = '$iconsDaleelPath/onboard02.svg';
+  static String onboard03 = '$iconsDaleelPath/onboard03.svg';
 }
 
 class IconsLine {
@@ -52,6 +52,7 @@ class IconsLine {
   static String check = '$iconsLinePath/check.svg';
   static String checkRead = '$iconsLinePath/check-read.svg';
   static String checkCircle = '$iconsLinePath/check-circle.svg';
+  static String chatRoundDots = '$iconsLinePath/chat-round-dots.svg';
   static String dumbell = '$iconsLinePath/dumbell-line.svg';
   static String dumbellGym = '$iconsLinePath/dumbbell-gym.svg';
   static String dumbbells = '$iconsLinePath/dumbbells.svg';
@@ -98,31 +99,30 @@ class IconsLine {
   static String heart = '$iconsLinePath/heart-angle.svg';
   static String hangout = '$iconsLinePath/hangout.svg';
   static String usersGroup = '$iconsLinePath/users-group.svg';
+  static String usersRound = '$iconsLinePath/user-rounded.svg';
   static String orders = '$iconsLinePath/orders.svg';
   static String vitals = '$iconsLinePath/heart-pulse.svg';
 }
 
 class IconFill {
-  static String star = '$iconsLinePath/star.svg';
-  static String heart = '$iconsLinePath/heart-angle.svg';
-  static String darkMode = '$iconsLinePath/dark-mode.svg';
-  static String userAvatar = '$iconsLinePath/user.svg';
-  static String user = '$iconsLinePath/user-2.svg';
-  static String usersHang = '$iconsLinePath/users-group.svg';
-  static String usersGroup = '$iconsLinePath/users-group-two.svg';
-  static String trash = '$iconsLinePath/trash.svg';
-  static String archive = '$iconsLinePath/inbox-archive.svg';
-  static String closeCircle = '$iconsLinePath/close-circle.svg';
-  static String mic = '$iconsLinePath/mic.svg';
-  static String send = '$iconsLinePath/send.svg';
-  static String maleBody = '$iconsLinePath/male_body.svg';
-  static String maleBody01 = '$iconsLinePath/male_body01.svg';
-  static String userCheckRounded = '$iconsLinePath/user-check-rounded.svg';
-  static String chatRoundLine = '$iconsLinePath/chat-round-line.svg';
-  static String chatRoundDots = '$iconsLinePath/chat-round-dots.svg';
-  static String gps = '$iconsLinePath/gps.svg';
-  static String pinLocation = '$iconsLinePath/location.svg';
-  static String male = '$iconsLinePath/maleIcon.svg';
-  static String female = '$iconsLinePath/femaleIcon.svg';
-  static String dumbbell = '$iconsLinePath/dumbbell-gym.svg';
+  static String star = '$iconsFillPath/star.svg';
+  static String heart = '$iconsFillPath/heart-angle.svg';
+  static String home = '$iconsFillPath/home.svg';
+  static String darkMode = '$iconsFillPath/dark-mode.svg';
+  static String userAvatar = '$iconsFillPath/user.svg';
+  static String user = '$iconsFillPath/user-2.svg';
+  static String userRound = '$iconsFillPath/user-rounded.svg';
+  static String usersGroup = '$iconsFillPath/users-group-two.svg';
+  static String trash = '$iconsFillPath/trash.svg';
+  static String archive = '$iconsFillPath/inbox-archive.svg';
+  static String closeCircle = '$iconsFillPath/close-circle.svg';
+  static String mic = '$iconsFillPath/mic.svg';
+  static String send = '$iconsFillPath/send.svg';
+  static String userCheckRounded = '$iconsFillPath/user-check-rounded.svg';
+  static String chatRoundLine = '$iconsFillPath/chat-round-line.svg';
+  static String chatRoundDots = '$iconsFillPath/chat-round-dots.svg';
+  static String gps = '$iconsFillPath/gps.svg';
+  static String pinLocation = '$iconsFillPath/location.svg';
+  static String male = '$iconsFillPath/maleIcon.svg';
+  static String female = '$iconsFillPath/femaleIcon.svg';
 }
