@@ -6,6 +6,7 @@ part 'locale_event.dart';
 part 'locale_state.dart';
 
 class LocaleBloc extends Bloc<LocaleEvent, Locale> {
+  static LocaleBloc get(context) => BlocProvider.of(context);
   LocaleBloc() : super(const Locale('en')) {
     on<LocaleEvent>((event, emit) {});
     on<Checklocale>((event, emit) async {
@@ -19,4 +20,17 @@ class LocaleBloc extends Bloc<LocaleEvent, Locale> {
       emit(event.locale);
     });
   }
+
+    bool get langApp => state == const Locale('en');
+
+  Future<bool> checkLangIsEng() async {
+    final code = await LanguageCacheHelper.getCachedLanguageCode();
+    if (code == 'en') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+
+LocaleBloc localeBloc(BuildContext context) => LocaleBloc.get(context);

@@ -10,7 +10,7 @@ class OnboardingLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.colorScheme.background,
+      backgroundColor: context.colorScheme.surface,
       body: const AdaptiveLayoutWidget(
       mobileLayout: MobileScreen(), 
       tabletLayout: TabletScreen(), 

@@ -20,14 +20,17 @@ class MobileScreen extends StatelessWidget {
           title: 'password',
         ),
         SizedBox(height: 20.rH),
-        AdaptiveFilledButtonWidget(press: () {}, label: 'sign in'),
+        AdaptiveFilledButtonWidget(
+          press: () => Routes.vendorLayout.offPage(),
+          label: 'sign in',
+        ),
         TextButton.icon(
             onPressed: () {},
             icon: Icon(Icons.lock_open),
             label: Text(
               'Forget password',
               style: context.labelMedium!
-                  .copyWith(color: context.colorScheme.onBackground),
+                  .copyWith(color: context.colorScheme.onSurface),
             ))
       ],
     );
