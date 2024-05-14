@@ -14,7 +14,7 @@ class OnboardingLayout extends StatelessWidget {
       body: const AdaptiveLayoutWidget(
       mobileLayout: MobileScreen(), 
       tabletLayout: TabletScreen(), 
-      // desktopLayout: DesktopScreen(),
+      desktopLayout: DesktopScreen(),
       ),
     );
   }

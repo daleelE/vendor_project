@@ -1,5 +1,4 @@
 import '../../../../../../exports.dart';
-import '../custom_animations/scale_animation.dart';
 import 'components/custom_nav_bar.dart';
 
 class BottomNavBar extends StatelessWidget {
