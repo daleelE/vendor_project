@@ -1,4 +1,3 @@
-
 import '../../../../../exports.dart';
 import 'components/layout_transform.dart';
 import 'components/side_menu_btn.dart';
@@ -58,7 +57,7 @@ class _Animated3dDrawerState extends State<Animated3dDrawer>
     return Scaffold(
       extendBody: true,
       resizeToAvoidBottomInset: false,
-      backgroundColor: context.colorScheme.primary.darken(75),
+      backgroundColor: getPrimaryThemeColor(context),
       body: Stack(
         children: [
           AnimatedPositionedDirectional(
@@ -79,17 +78,22 @@ class _Animated3dDrawerState extends State<Animated3dDrawer>
           ValueListenableBuilder(
               valueListenable: menuClose,
               builder: (context, val, _) {
-                return SideMenuBtn(
-                  val,
-                  onChangedMenuState: (open){
-                    if (open) {
-                      menuClose.value = false;
-                      animationController.forward();
-                    } else {
-                      menuClose.value = true;
-                      animationController.reverse();
-                    }
-                  },
+                return AnimatedPositionedDirectional(
+                  duration: const Duration(milliseconds: 500),
+                  top: 18.rH,
+                  start: !val ? (SizeConfig.screenWidth / 2 - 24.rW) : 24.rW,
+                  child: SideMenuBtn(
+                    val,
+                    onChangedMenuState: (open) {
+                      if (val) {
+                        menuClose.value = false;
+                        animationController.forward();
+                      } else {
+                        menuClose.value = true;
+                        animationController.reverse();
+                      }
+                    },
+                  ),
                 );
               }),
         ],
@@ -99,4 +103,3 @@ class _Animated3dDrawerState extends State<Animated3dDrawer>
     );
   }
 }
-

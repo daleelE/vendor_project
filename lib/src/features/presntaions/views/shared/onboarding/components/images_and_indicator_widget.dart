@@ -29,8 +29,8 @@ class _ImagesAndIndicatorState extends State<ImagesAndIndicator> {
                 end: Alignment.topCenter,
                 stops: const [0.4, .5],
                 colors: [
-                  context.colorScheme.background,
-                  context.colorScheme.background.withOpacity(.0),
+                  context.colorScheme.surface,
+                  context.colorScheme.surface.withOpacity(.0),
                 ],
               ),
             ),
@@ -65,14 +65,14 @@ class _ImagesAndIndicatorState extends State<ImagesAndIndicator> {
                 Text(
                   onboardingItem[currentPage].title.capitalize!,
                   style: context.titleMedium!
-                      .copyWith(color: context.colorScheme.onBackground),
+                      .copyWith(color: context.colorScheme.onSurface),
                 ),
                 SizedBox(height: 10.rH),
                 Text(
                   onboardingItem[currentPage].description,
                   textAlign: TextAlign.center,
                   style: context.bodySmall!
-                      .copyWith(color: context.colorScheme.onBackground),
+                      .copyWith(color: context.colorScheme.onSurface),
                 ),
               ],
             ),

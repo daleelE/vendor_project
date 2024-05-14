@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../features/presntaions/bloc/locale_bloc/locale_bloc.dart';
 import '../helpers/info_helper.dart';
-
 
 extension ContextExtension on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
@@ -53,27 +53,31 @@ extension TextThemeExtension on BuildContext {
   TextStyle? get labelSmall => textTheme.labelSmall;
 }
 
-  const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  const arabic = ['۰', '۱', '۲', '۳', '٤', '٥', '٦', '۷', '۸', '۹'];
+const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const arabic = ['۰', '۱', '۲', '۳', '٤', '٥', '٦', '۷', '۸', '۹'];
+
 extension NumbersExtension on String {
-  String get numTr {
+  String numTr(BuildContext context) {
     String source = this;
-  
-    if(getLocal == 'ar'){
+    const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const arabic = ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹'];
+    if (!localeBloc(context).langApp) {
       for (int i = 0; i < english.length; i++) {
         source = source.replaceAll(english[i], arabic[i]);
       }
     }
     return source;
   }
-  String toAr (){
+
+  String toAr() {
     String source = this;
     for (int i = 0; i < english.length; i++) {
       source = source.replaceAll(english[i], arabic[i]);
     }
     return source;
   }
-  String toEn (){
+
+  String toEn() {
     for (int i = 0; i < english.length; i++) {
       replaceAll(arabic[i], english[i]);
     }
@@ -85,15 +89,17 @@ extension DateExtension on String {
   DateTime get toDate {
     return DateTime.fromMillisecondsSinceEpoch(int.parse(this));
   }
+
   DateTime get toDateTime {
     return DateTime.fromMillisecondsSinceEpoch(int.parse(this));
   }
+
   String get toTxtDate {
     final date = DateTime.fromMillisecondsSinceEpoch(int.parse(this));
     return DateFormat('EE dd, yyyy').format(date);
   }
 
-  String  toCustomDate(String schema) {
+  String toCustomDate(String schema) {
     final date = DateTime.fromMillisecondsSinceEpoch(int.parse(this));
     return DateFormat(schema).format(date);
   }
@@ -108,13 +114,11 @@ extension DateExtension on String {
     return DateFormat('hh:mm a').format(date);
   }
 
-
   String get toDTString {
     final date = DateTime.fromMillisecondsSinceEpoch(int.parse(this));
     return DateFormat('EE dd, yyyy hh:mm a').format(date);
   }
 }
-
 
 extension ColorExtension on Color {
   /// Convert the color to a darken color based on the [percent]

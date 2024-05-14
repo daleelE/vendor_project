@@ -7,12 +7,12 @@ class ThemeService {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
       useMaterial3: true,
       colorScheme: lightColorScheme,
-      textTheme: GoogleFonts.lexendTextTheme(customTextTheme(context)));
+      textTheme: GoogleFonts.cairoTextTheme(customTextTheme(context)));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
       useMaterial3: true,
       colorScheme: darkColorScheme,
-      textTheme: GoogleFonts.lexendTextTheme(customTextTheme(context)));
+      textTheme: GoogleFonts.cairoTextTheme(customTextTheme(context)));
 }
 
 TextTheme customTextTheme(BuildContext context) => TextTheme(
