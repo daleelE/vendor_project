@@ -1,22 +1,23 @@
-
 import '../../../../../exports.dart';
 
 class SvgButton extends StatelessWidget {
-  const SvgButton(this.icon,
-      {super.key,
-      required this.press,
-      this.margin,
-      this.height,
-      this.background,
-      this.size = 20,
-      this.paddingValue = 4,
-      this.radius = 320,
-      this.iconColor,
-      this.filled = false,
-      this.isCircle = false,
-      this.borderWidth = .7,
-      this.borderColor,
-      this.padding});
+  const SvgButton(
+    this.icon, {
+    super.key,
+    required this.press,
+    this.margin,
+    this.height,
+    this.background,
+    this.size = 20,
+    this.paddingValue = 4,
+    this.radius = 320,
+    this.iconColor,
+    this.filled = false,
+    this.isCircle = false,
+    this.borderWidth = .7,
+    this.borderColor,
+    this.padding,
+  });
   final VoidCallback press;
   final String icon;
   final EdgeInsetsGeometry? margin;

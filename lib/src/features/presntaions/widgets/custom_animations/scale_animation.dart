@@ -5,12 +5,13 @@ class MyScaleAnimation extends StatefulWidget {
   final bool repeat;
   final double scale;
   final double duration;
-  const MyScaleAnimation(
-      {super.key,
-      required this.child,
-      this.repeat = false,
-      this.scale = 0,
-      this.duration = 1});
+  const MyScaleAnimation({
+    super.key,
+    required this.child,
+    this.repeat = false,
+    this.scale = 0,
+    this.duration = 1,
+  });
 
   @override
   State<MyScaleAnimation> createState() => _MyScaleAnimationState();
@@ -51,13 +52,12 @@ class _MyScaleAnimationState extends State<MyScaleAnimation>
     } else {
       animationController.forward();
     }
-    
   }
 
   AnimationController get _animationController => AnimationController(
         vsync: this,
         lowerBound: widget.scale,
-        duration:  Duration(milliseconds: (widget.duration * 1000).toInt()),
+        duration: Duration(milliseconds: (widget.duration * 1000).toInt()),
       );
 
   Animation<double> _animation(AnimationController controller) => Tween<double>(

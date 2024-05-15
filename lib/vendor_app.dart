@@ -2,7 +2,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'exports.dart';
-import 'src/core/routing/app_router.dart';
 import 'src/core/theme/theme_service.dart';
 
 class VendorApp extends StatefulWidget {
