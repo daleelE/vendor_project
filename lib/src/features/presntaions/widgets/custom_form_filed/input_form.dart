@@ -2,8 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../../../../exports.dart';
-import '../../../../core/theme/app_color.dart';
-import '../../bloc/theme_bloc/theme_bloc.dart';
+
 
 class CustomTextForm extends StatefulWidget {
   const CustomTextForm({
@@ -79,7 +78,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
               child: Text(
                 widget.title!.capitalize!,
                 style: widget.titleStyle ??
-                    context.bodyMedium!.copyWith(color: context.colorScheme.onBackground),
+                    context.bodyMedium!.copyWith(color: context.colorScheme.onSurface),
               ),
             ),
           TextFormField(
@@ -95,7 +94,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
             textAlign: widget.textAlign ?? TextAlign.start,
             keyboardType: widget.keyboardType,
             maxLines: widget.maxLines,
-            cursorColor: context.colorScheme.onBackground,
+            cursorColor: context.colorScheme.onSurface,
             inputFormatters: widget.maxCharacters != null
                 ? [
                     LengthLimitingTextInputFormatter(widget.maxCharacters),
@@ -103,7 +102,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
                 : [],
             style: widget.titleStyle ??
                 context.bodyLarge!
-                    .copyWith(color: context.colorScheme.onBackground),
+                    .copyWith(color: context.colorScheme.onSurface),
             strutStyle: StrutStyle.fromTextStyle(context.bodyMedium!
                 .copyWith(color: AppColor.primary.withOpacity(.7))),
             decoration: InputDecoration(
@@ -112,15 +111,15 @@ class _CustomTextFormState extends State<CustomTextForm> {
                   const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               fillColor: widget.inputColor ??
                   (isDarkTheme
-                      ? context.colorScheme.background.lighten(20)
-                      : context.colorScheme.background.darken(5)),
+                      ? context.colorScheme.surface.lighten(20)
+                      : context.colorScheme.surface.darken(5)),
               filled: true,
               counter: widget.counter,
               counterText: widget.helperText ?? '',
               counterStyle: context.labelSmall!.copyWith(color: Colors.black54),
               hintText: widget.hint != null ? widget.hint!.capitalize : '',
               hintStyle: context.bodySmall!.copyWith(
-                  color: context.colorScheme.onBackground.lighten(50)),
+                  color: context.colorScheme.onSurface.lighten(50)),
               // helperText: c ?? "" ,
               suffixText: widget.suffix,
               suffixStyle: context.bodySmall!.copyWith(color: Colors.black54),

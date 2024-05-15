@@ -1,7 +1,6 @@
 import 'package:lottie/lottie.dart';
 
 import '../../../../../../exports.dart';
-import '../../../../../core/routing/app_router.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

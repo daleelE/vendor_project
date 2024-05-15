@@ -12,11 +12,11 @@ class MobileScreen extends StatelessWidget {
         SizedBox(
           height: SizeConfig.screenHeight * .3,
         ),
-        CustomTextForm(
+        const CustomTextForm(
           title: 'email',
         ),
         SizedBox(height: 10.rH),
-        CustomTextForm(
+        const CustomTextForm(
           title: 'password',
         ),
         SizedBox(height: 20.rH),
@@ -26,7 +26,7 @@ class MobileScreen extends StatelessWidget {
         ),
         TextButton.icon(
             onPressed: () {},
-            icon: Icon(Icons.lock_open),
+            icon: const Icon(Icons.lock_open),
             label: Text(
               'Forget password',
               style: context.labelMedium!

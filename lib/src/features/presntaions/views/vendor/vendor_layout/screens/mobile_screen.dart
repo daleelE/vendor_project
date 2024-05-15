@@ -27,7 +27,7 @@ class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Animated3dDrawer(
-      menu: SideMenu(),
+      menu: const SideMenu(),
       mainScreen: PopScope(
         canPop: _getCanPop,
         child: Scaffold(
