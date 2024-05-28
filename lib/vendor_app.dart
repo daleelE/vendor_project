@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'exports.dart';
@@ -29,9 +28,7 @@ class _VendorAppState extends State<VendorApp> {
     return MultiBlocProvider(
       providers: BlocProviders.all,
       child: GetMaterialApp(
-        useInheritedMediaQuery: true,
-        builder: DevicePreview.appBuilder,
-        locale: DevicePreview.locale(context),
+        locale: Locale('en'),
         debugShowCheckedModeBanner: false,
         theme: ThemeService.lightTheme(context),
         darkTheme: ThemeService.darkTheme(context),

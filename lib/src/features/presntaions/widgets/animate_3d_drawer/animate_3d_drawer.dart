@@ -18,11 +18,13 @@ class Animated3dDrawer extends StatefulWidget {
 
 class _Animated3dDrawerState extends State<Animated3dDrawer>
     with SingleTickerProviderStateMixin {
+
   late AnimationController animationController;
   late Animation<double> animation;
   late Animation<double> scaleAnimation;
+  
   double fixedWidth = SizeConfig.screenWidth / 2;
-  final menuClose = ValueNotifier(true);
+  ValueNotifier<bool> menuClose = ValueNotifier(true);
 
   @override
   void initState() {

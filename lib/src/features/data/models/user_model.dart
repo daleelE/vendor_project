@@ -8,7 +8,6 @@ class UserModel extends UserEntity {
       required super.phoneNumber,
       required super.photoUrl,
       required super.online,
-      required super.lastSeen,
       required super.type,
       required super.provider,
       required super.create,
@@ -16,13 +15,12 @@ class UserModel extends UserEntity {
 
   factory UserModel.fromJson(Map<String, dynamic>? map) {
     return UserModel(
-      uid: map!['uid'],
+      uid: map!['id'],
       email: map['email'],
-      displayName: map['display_name'],
+      displayName: map['name'],
       photoUrl: map['photo_url'],
       phoneNumber: map['phone_number'],
       online: map['online'],
-      lastSeen: DateTime.fromMillisecondsSinceEpoch(map['last_seen']),
       type: map['user_type'],
       provider: map['provider'],
       create: DateTime.fromMillisecondsSinceEpoch(map['create']),
@@ -30,13 +28,12 @@ class UserModel extends UserEntity {
   }
 
   Map<String, dynamic> get toJson => {
-        'uid': uid,
+        'id': uid,
         'email': email,
-        'display_name': displayName,
+        'name': displayName,
         'photo_url': photoUrl,
         'phone_number': phoneNumber,
         'online': online,
-        'last_seen': lastSeen.millisecondsSinceEpoch,
         'user_type': type.name,
         'provider': provider.name,
         'create': create.millisecondsSinceEpoch,
