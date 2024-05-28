@@ -1,5 +1,4 @@
 import '../../../../../../../exports.dart';
-import '../../../../../../core/routing/app_router.dart';
 import '../components/images_and_indicator_widget.dart';
 
 class MobileScreen extends StatefulWidget {

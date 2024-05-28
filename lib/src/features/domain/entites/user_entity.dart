@@ -7,7 +7,6 @@ import '../../data/models/user_model.dart';
 class UserEntity extends Equatable {
   final String uid, email, displayName, photoUrl, phoneNumber;
   final bool online;
-  final DateTime lastSeen;
   final UserType type;
   final ProviderEnum provider;
   final DateTime create;
@@ -19,7 +18,6 @@ class UserEntity extends Equatable {
     required this.displayName,
     required this.photoUrl,
     required this.online,
-    required this.lastSeen,
     required this.type,
     required this.provider,
     required this.create,
@@ -33,7 +31,6 @@ class UserEntity extends Equatable {
         photoUrl,
         displayName,
         online,
-        lastSeen,
         type,
         provider,
         create,
@@ -45,7 +42,6 @@ class UserEntity extends Equatable {
         displayName: displayName,
         phoneNumber: phoneNumber,
         online: online,
-        lastSeen: lastSeen,
         photoUrl: photoUrl,
         type: type,
         provider: provider,

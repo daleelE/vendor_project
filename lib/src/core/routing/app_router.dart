@@ -7,6 +7,7 @@ import '../../features/presntaions/views/shared/splash/splash_screen.dart';
 import '../../features/presntaions/views/vendor/vendor_layout/vendor_layout.dart';
 import 'routers.dart';
 
+
 class AppRouter {
   static List<GetPage<dynamic>>? getPages = [
     getPage(

@@ -27,8 +27,6 @@ class NavItem extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // AnimatedBar(isActive: selected),
-                // verticalSpacing(4),
                 SvgIcon(
                   selected ? nav.activeIcon : nav.icon,
                   width: 24,

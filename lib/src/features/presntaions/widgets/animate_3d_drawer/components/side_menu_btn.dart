@@ -31,3 +31,6 @@ class _SideMenuBtnState extends State<SideMenuBtn> {
     );
   }
 }
+
+///
+/// set state rebuild widget 
